@@ -5,8 +5,8 @@ const app = express();
 const cors = require("cors");
 app.use(express.json());
 app.use(cors());
-app.listen(3001);
 app.set(express.urlencoded({ extended: true }));
+app.listen(process.env.PORT || 3001,()=>console.log("Listening on PORT "+ process.env.PORT || 3001));
 
 mongoose
   .connect(
