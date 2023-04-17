@@ -10,7 +10,7 @@ const handleSubmit=async(e)=>{
     a.updateUsername=e.target.UpdateUsername.value;
     a.updatePassword=e.target.UpdatePassword.value;
     a.updateMobilenum=e.target.UpdateMobileNum.value;
-    const{data:jwttoken}=await axios.put('http://localhost:3001/users/'+user._id,a);
+    const{data:jwttoken}=await axios.put('https://shopgenix.onrender.com/users/'+user._id,a);
     localStorage.removeItem('token');
     localStorage.setItem('token',jwttoken);
     window.location.href="/";

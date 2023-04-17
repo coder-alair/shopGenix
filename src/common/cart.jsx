@@ -12,7 +12,7 @@ const Cart = () => {
             const a = {
                 userId: currentUser._id
             }
-            const { data: cartData } = await axios.post("http://localhost:3001/cart/item", a);
+            const { data: cartData } = await axios.post("https://shopgenix.onrender.com/cart/item", a);
             setCartData(cartData);
         }
         getData();
@@ -20,18 +20,18 @@ const Cart = () => {
 
     const handleIncre = async (i) => {
         const item = { quantity: i.quantity + 1 };
-        await axios.put('http://localhost:3001/cart/' + i._id, item);
+        await axios.put('https://shopgenix.onrender.com/cart/' + i._id, item);
         window.location.href = "/cart";
     }
 
     const handleDecre = async (i) => {
         const item = { quantity: i.quantity - 1 };
-        await axios.put('http://localhost:3001/cart/' + i._id, item);
+        await axios.put('https://shopgenix.onrender.com/cart/' + i._id, item);
         window.location.href = "/cart";
     }
 
     const handleDelete = async (i) => {
-        await axios.delete('http://localhost:3001/cart/' + i._id);
+        await axios.delete('https://shopgenix.onrender.com/cart/' + i._id);
         window.location.href = "/cart";
     }
 

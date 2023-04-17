@@ -7,20 +7,15 @@ const MyOrders = () => {
 
     useEffect(() => {
         async function getOrders() {
-            const { data: orders } = await axios.get("http://localhost:3001/order/" + user._id);
+            const { data: orders } = await axios.get("https://shopgenix.onrender.com/order/" + user._id);
             setOrders(orders);
         }
         getOrders();
     }, []);
 
     const delOrder = async (product) => {
-        await axios.delete("http://localhost:3001/order/" + product._id);
-        // const walletUpdate = {
-        //     wallet: parseInt(user.wallet + product.price)
-        // }
-        // const { data: jwttoken } = await axios.put("http://localhost:3001/updateWallet/" + user._id, walletUpdate);
-        // localStorage.removeItem('token');
-        // localStorage.setItem('token', jwttoken);
+        await axios.delete("https://shopgenix.onrender.com/order/" + product._id);
+      
         window.location.reload(false);
     }
     return (

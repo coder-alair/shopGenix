@@ -10,7 +10,7 @@ const Login = () => {
     const a = {};
     a.loginEmail = e.target.LoginEmail.value;
     a.loginPassword = e.target.LoginPassword.value;
-    const { data: jwttoken } = await axios.post('http://localhost:3001/login', a);
+    const { data: jwttoken } = await axios.post('https://shopgenix.onrender.com/login', a);
     localStorage.setItem('token', jwttoken);
     toast.success("Login Successful",
       {

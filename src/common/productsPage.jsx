@@ -8,7 +8,7 @@ const ProductPage = () => {
     const [productsData, setProductsData] = useState([]);
     useEffect(() => {
         async function getData() {
-            const { data: productData } = await axios.get('http://localhost:3001/products');
+            const { data: productData } = await axios.get('https://shopgenix.onrender.com/products');
             setProductsData(productData);
         }
         getData();

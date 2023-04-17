@@ -20,7 +20,7 @@ const Order = () => {
             const a = {
                 userId: currentUser._id
             }
-            const { data: cartData } = await axios.post("http://localhost:3001/cart/item", a);
+            const { data: cartData } = await axios.post("https://shopgenix.onrender.com/cart/item", a);
             setCartData(cartData);
         }
         getData();
@@ -31,7 +31,7 @@ const Order = () => {
         const a={
             deliAddress:e.target.ChangeDeliAddress.value
         }
-        const{data:jwttoken}=await axios.put('http://localhost:3001/users/'+currentUser._id,a);
+        const{data:jwttoken}=await axios.put('https://shopgenix.onrender.com/users/'+currentUser._id,a);
         localStorage.removeItem('token');
         localStorage.setItem('token',jwttoken);
        window.location.href="/orders";
@@ -58,8 +58,8 @@ const Order = () => {
                 quantity: product.quantity,
                 cartId:product._id
             };
-            await axios.post("http://localhost:3001/order", a);
-            const {data:newCart}=await axios.post("http://localhost:3001/cart/order", a);
+            await axios.post("https://shopgenix.onrender.com/order", a);
+            const {data:newCart}=await axios.post("https://shopgenix.onrender.com/cart/order", a);
             setCartData(newCart);
             toast.success('Order Placed',
             {

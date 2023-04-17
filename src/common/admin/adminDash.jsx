@@ -7,18 +7,18 @@ const AdminDash = ({user}) => {
     const [order,setOrders]=useState([]);
     useEffect(()=>{
       async function getProducts(){
-        const {data:allproducts}=await axios.get("http://localhost:3001/products");
+        const {data:allproducts}=await axios.get("https://shopgenix.onrender.com/products");
         setProducts(allproducts);
      }
      getProducts();
      async function getUsers(){
-        const {data:allusers}=await axios.get("http://localhost:3001/users");
+        const {data:allusers}=await axios.get("https://shopgenix.onrender.com/users");
         const filteredAdmin=allusers.filter(i=>i.isAdmin!=user.isAdmin);
         setUsers(filteredAdmin);
      }
      getUsers();
      async function getOrders(){
-        const {data:allOrders}=await axios.get("http://localhost:3001/order");
+        const {data:allOrders}=await axios.get("https://shopgenix.onrender.com/order");
         setOrders(allOrders);
      }
      getOrders();

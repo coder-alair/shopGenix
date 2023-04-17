@@ -12,7 +12,7 @@ const SignUp = () => {
         a.regPassword=e.target.SignUpPassword.value;
         a.regMobilenum=e.target.SignUpMobileNum.value;
         a.deliAddress=e.target.DeliAddress.value;
-        const {data:jwttoken}=await axios.post('http://localhost:3001/users',a);
+        const {data:jwttoken}=await axios.post('https://shopgenix.onrender.com/users',a);
         localStorage.setItem('token',jwttoken);
         toast.success("Registeration Successful",
         {

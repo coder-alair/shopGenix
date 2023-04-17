@@ -5,14 +5,14 @@ const AdminProducts = ({user}) => {
 const [products,setProducts]=useState([]);
 useEffect(()=>{
   async function getProducts(){
-    const {data:allproducts}=await axios.get("http://localhost:3001/products");
+    const {data:allproducts}=await axios.get("https://shopgenix.onrender.com/products");
     setProducts(allproducts);
  }
  getProducts();
 },[]);
 
 const delProduct=async(product)=>{
-await axios.delete("http://localhost:3001/products/"+product._id);
+await axios.delete("https://shopgenix.onrender.com/products/"+product._id);
 window.location.href="/adminPanel";
 }
 

@@ -5,14 +5,14 @@ const Orders = ({ user }) => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         async function getOrders() {
-            const { data: orders } = await axios.get("http://localhost:3001/order");
+            const { data: orders } = await axios.get("https://shopgenix.onrender.com/order");
             setOrders(orders);
         }
         getOrders();
     }, []);
 
     const delOrder = async (product) => {
-        await axios.delete("http://localhost:3001/order/" + product._id);
+        await axios.delete("https://shopgenix.onrender.com/order/" + product._id);
         window.location.reload(false);
     }
 

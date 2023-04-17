@@ -17,7 +17,7 @@ const OrderOne = () => {
     useEffect(() => {
         async function getData() {
             const id = { id: productId };
-            const { data: productDetails } = await axios.post('http://localhost:3001/order/product/', id);
+            const { data: productDetails } = await axios.post('https://shopgenix.onrender.com/order/product/', id);
             setProduct(productDetails);
         }
         getData();
@@ -28,7 +28,7 @@ const OrderOne = () => {
         const a = {
             deliAddress: e.target.ChangeDeliAddress.value
         }
-        const { data: jwttoken } = await axios.put('http://localhost:3001/users/' + currentUser._id, a);
+        const { data: jwttoken } = await axios.put('https://shopgenix.onrender.com/users/' + currentUser._id, a);
         localStorage.removeItem('token');
         localStorage.setItem('token', jwttoken);
         window.location.href = "/order/" + product._id;
@@ -54,9 +54,9 @@ const OrderOne = () => {
                 storeName: product.storeName,
                 quantity: 1,
             };
-            await axios.post("http://localhost:3001/order", a);
+            await axios.post("https://shopgenix.onrender.com/order", a);
             const walletUpdated = {wallet:wallet - product.price};
-            const {data:jwttoken}=await axios.put("http://localhost:3001/updateWallet/" + currentUser._id, walletUpdated);
+            const {data:jwttoken}=await axios.put("https://shopgenix.onrender.com/updateWallet/" + currentUser._id, walletUpdated);
             localStorage.removeItem('token');
             localStorage.setItem('token', jwttoken);
             toast.success('Order Placed',

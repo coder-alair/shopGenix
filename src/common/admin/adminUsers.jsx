@@ -5,7 +5,7 @@ const AdminUsers = ({user}) => {
 const [users,setUsers]=useState([]);
 useEffect(()=>{
   async function getUsers(){
-    const {data:allusers}=await axios.get("http://localhost:3001/users");
+    const {data:allusers}=await axios.get("https://shopgenix.onrender.com//users");
     const filteredAdmin=allusers.filter(i=>i.isAdmin!=user.isAdmin);
     setUsers(filteredAdmin);
  }
@@ -13,7 +13,7 @@ useEffect(()=>{
 },[]);
 
 const delUser=async(user)=>{
-await axios.delete("http://localhost:3001/users/"+user._id);
+await axios.delete("https://shopgenix.onrender.com/users/"+user._id);
 window.location.href="/adminPanel";
 }
 
@@ -25,7 +25,7 @@ const handleSubmit=async(e)=>{
     a.regPassword=e.target.SignUpPassword.value;
     a.regMobilenum=e.target.SignUpMobileNum.value;
     a.deliAddress=e.target.DeliAddress.value;
-    await axios.post('http://localhost:3001/users',a);
+    await axios.post('https://shopgenix.onrender.com/users',a);
     window.location.href="/adminPanel";
 }
 

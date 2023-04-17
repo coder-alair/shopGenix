@@ -13,7 +13,7 @@ const ProductDetailPage = () => {
     const discount = Math.floor(Math.random() * 100);
     useEffect(() => {
         async function getData() {
-            const { data: productDetails } = await axios.get('http://localhost:3001/products/' + (window.location.href).slice(31));
+            const { data: productDetails } = await axios.get('https://shopgenix.onrender.com/products/' + (window.location.href).slice(31));
             setProduct(productDetails);
         }
         getData();
@@ -35,7 +35,7 @@ const ProductDetailPage = () => {
             storeName: product.storeName,
             quantity:1
         };
-        await axios.post("http://localhost:3001/cart", a);
+        await axios.post("https://shopgenix.onrender.com/cart", a);
         toast.success('Product Added to Cart',
             {
                 position: toast.POSITION.TOP_CENTER

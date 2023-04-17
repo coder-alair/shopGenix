@@ -16,7 +16,7 @@ const AdminAddProduct = ({user}) => {
         a.reviews=e.target.AddReviews.value;
         a.storeName=e.target.AddStoreName.value;
        
-        await axios.post('http://localhost:3001/products',a);
+        await axios.post('https://shopgenix.onrender.com/products',a);
         window.location.href="/adminPanel";
     }
     
