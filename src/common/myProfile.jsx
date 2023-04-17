@@ -22,6 +22,8 @@ const MyProfile = () => {
               <p>Your Username : {user.username}</p>
               <p>Your Mobile Number : {user.mobileNum}</p>
               <p>Your Email ID : {user.email}</p>
+              <p>Current Address : {user.deliAddress}</p>
+              <p>Wallet Balance : {user.wallet}</p>
               <p>Your Role : {user.isAdmin?"Admin":"User"}</p>
               <div className="modal-footer">
         <button className="btn btn-primary zoom" data-bs-target="#UpdateModal" data-bs-toggle="modal">Edit</button>

@@ -67,7 +67,7 @@ const Order = () => {
             }
         );
             setTimeout(()=>{
-                window.location.href="/cart"
+                window.location.href="/myOrders";
             },1000);
         }
         cartData.map(i => orderplace(i));

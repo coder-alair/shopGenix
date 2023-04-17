@@ -8,6 +8,8 @@ import Order from './common/orderProduct';
 import OrderOne from './common/orderOneProduct';
 import AdminPanel from "./common/admin/adminPanel";
 import React from "react";
+import MyOrders from "./common/myOrders";
+import ErrorPage from "./common/errorPage";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/adminPanel" exact Component={AdminPanel} />
         <Route path="/orders" exact Component={Order} />
         <Route path="/order/:id" exact Component={OrderOne} />
+        <Route path="/myOrders" exact Component={MyOrders} />
+        <Route path="*" exact Component={ErrorPage} />
       </Routes>
     </div>
   );

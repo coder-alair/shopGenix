@@ -20,7 +20,6 @@ const Orders = ({ user }) => {
         <div>
             {orders.length > 0 ?
                 <div>
-
                     <table className="table mt-1">
                         <thead><tr>
                             <th scope="col"></th>
@@ -52,7 +51,6 @@ const Orders = ({ user }) => {
                             )}
                         </tbody>
                     </table>
-
                 </div>
                 :
                 <div className="fs-4 mt-5">No Orders Currently</div>

@@ -46,6 +46,9 @@ const Navbar = () => {
                       <Link className="nav-link" to="/cart" state={user}>Cart</Link>
                     </li>
                     <li className="nav-item zoom">
+                      <Link className="nav-link" to="/myOrders" state={user}>My Orders</Link>
+                    </li>
+                    <li className="nav-item zoom">
                       <a className="nav-link" onClick={logout}>Logout</a>
                     </li>
                  </React.Fragment>
