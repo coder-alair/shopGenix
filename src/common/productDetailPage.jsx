@@ -7,13 +7,15 @@ import {ToastContainer,toast} from 'react-toastify';
 
 const ProductDetailPage = () => {
     const location = useLocation();
-    const currentUser = location.state;
+    const productId = location.state;
+    const currentUser = localStorage.getItem('token') ? jwtDecode(localStorage.getItem('token')) : null;
+   
     const [product, setProduct] = useState({});
 
     const discount = Math.floor(Math.random() * 100);
     useEffect(() => {
         async function getData() {
-            const { data: productDetails } = await axios.get('https://shopgenix.onrender.com/products/' + (window.location.href).slice(31));
+            const { data: productDetails } = await axios.get('https://shopgenix.onrender.com/products/' + productId._id);
             setProduct(productDetails);
         }
         getData();

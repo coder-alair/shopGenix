@@ -29,7 +29,7 @@ const Products = ({user}) => {
                                 <p className="card-text">From : {product.storeName}</p>
                                 <p className="card-text">Ratings : {product.rating}</p>
                                 <p className="card-text">Price : {product.price}</p>
-                                <Link className="btn btn-primary zoom" to={"/products/"+product._id} state={user}>See This Product</Link>
+                                <Link className="btn btn-primary zoom" to={"/products/"+product._id} state={product}>See This Product</Link>
                             </div>
                         </div>
                     </div>
