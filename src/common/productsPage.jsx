@@ -87,7 +87,7 @@ const ProductPage = () => {
                                 <p className="card-text">Ratings : {product.rating}</p>
                                 <p className="card-text">Price : {product.price}</p>
                               
-                                <Link className="btn btn-primary" to={"/products/" + product._id} state={user}>Buy This Product</Link>
+                                <Link className="btn btn-primary" to={"/products/" + product._id} state={product}>Buy This Product</Link>
                              
                             </div>
                         </div>
