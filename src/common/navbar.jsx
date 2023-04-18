@@ -23,8 +23,8 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top m-1">
       <div className="container-fluid">
         <Link className="navbar-brand zoom" to={user?user.isAdmin==false?"/":"/adminPanel":"/"}><img src="/logo.jpeg" width="35px" height="35px" /></Link>
-        <button className="navbar-toggler" style={{height:"30px",width:"30px",border:"none"}} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon" style={{height:"20px",width:"10px",border:"none"}} ></span>
+        <button className="navbar-toggler" style={{height:"40px",width:"40px",border:"none"}} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" style={{height:"30px",width:"20px",border:"none"}} ></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <center>
