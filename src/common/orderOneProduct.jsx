@@ -55,10 +55,6 @@ const OrderOne = () => {
                 quantity: 1,
             };
             await axios.post("https://shopgenix.onrender.com/order", a);
-            const walletUpdated = {wallet:wallet - product.price};
-            const {data:jwttoken}=await axios.put("https://shopgenix.onrender.com/updateWallet/" + currentUser._id, walletUpdated);
-            localStorage.removeItem('token');
-            localStorage.setItem('token', jwttoken);
             toast.success('Order Placed',
                 {
                     position: toast.POSITION.TOP_CENTER

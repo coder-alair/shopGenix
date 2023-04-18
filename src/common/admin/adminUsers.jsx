@@ -5,7 +5,7 @@ const AdminUsers = ({user}) => {
 const [users,setUsers]=useState([]);
 useEffect(()=>{
   async function getUsers(){
-    const {data:allusers}=await axios.get("https://shopgenix.onrender.com//users");
+    const {data:allusers}=await axios.get("https://shopgenix.onrender.com/users");
     const filteredAdmin=allusers.filter(i=>i.isAdmin!=user.isAdmin);
     setUsers(filteredAdmin);
  }
