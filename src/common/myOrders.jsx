@@ -32,8 +32,8 @@ const MyOrders = () => {
                             <center><img src={"/products/"+i.product[0].image+".jpeg"} className="card-img-top" alt="..." style={{width:"200px",height:"200px"}} /></center>
                            
                                 <h5 className="card-title">{i.product[0].productName}</h5>
-                                <p className="card-text">From : {i.product[0].productId}</p>
-                                <p className="card-text">Ratings : {i.address}</p>
+                                <p className="card-text">Product ID : {i.product[0].productId}</p>
+                                <p className="card-text">Delivery Address : {i.address}</p>
                                 <p className="card-text">Price : {i.totalAmount}</p>
                                 <p className="card-text">Quantity : {i.quantity}</p>
                                 <button className="btn btn-danger btn-sm mt-2 zoom" onClick={() => delOrder(i)}>Cancel Order</button>

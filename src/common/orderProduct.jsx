@@ -113,10 +113,10 @@ const Order = () => {
 
             <div className='mt-3 m-2 container border'>
                 <p className='fs-4'>Price Details </p>
-                <div className="row"><div className="col-10 mb-4">Total Price ( {cartData.length} items )</div><div className="col">{total} /-</div></div>
-                <div className="row"><div className="col-10 mb-4">Delivery Charges </div><div className="col">{deliveryCharges == "Free Delivery" ? <span className='text-success'>Free Delivery</span> : deliveryCharges + " /-"}</div></div>
+                <div className="row"><div className="col-10 mb-4">Total Price ( {cartData.length} items )</div><div className="col">{total} </div></div>
+                <div className="row"><div className="col-10 mb-4">Delivery Charges </div><div className="col">{deliveryCharges == "Free Delivery" ? <span className='text-success'>Free Delivery</span> : deliveryCharges + " "}</div></div>
                 <div className="row"><div className="col mb-4 w-100 border-bottom"></div></div>
-                <div className="row"><div className="col-10 mb-4">Total Amount </div><div className="col">{deliveryCharges == "Free Delivery" ? totalAmount + " /-" : totalAmount + " /-"}</div></div>
+                <div className="row"><div className="col-10 mb-4">Total Amount </div><div className="col">{deliveryCharges == "Free Delivery" ? totalAmount + " " : totalAmount + " "}</div></div>
             </div>
 
             <div className="container mt-4">
