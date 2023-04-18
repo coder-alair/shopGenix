@@ -20,13 +20,14 @@ const Navbar = () => {
 
 
   return (<div>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top m-2">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary sticky-top m-1">
       <div className="container-fluid">
         <Link className="navbar-brand zoom" to={user?user.isAdmin==false?"/":"/adminPanel":"/"}><img src="/logo.jpeg" width="35px" height="35px" /></Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" style={{height:"30px",width:"30px",border:"none"}} type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" style={{height:"20px",width:"10px",border:"none"}} ></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
+          <center>
           <ul className="navbar-nav">
             {user && (
               <React.Fragment>
@@ -92,7 +93,7 @@ const Navbar = () => {
 
 
         
-          </ul>
+          </ul></center>
         </div>
       </div>
 
