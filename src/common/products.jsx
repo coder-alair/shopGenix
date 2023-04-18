@@ -16,7 +16,8 @@ const Products = ({user}) => {
    
 
     return (
-        <div className='justify-content-center'><center>
+        <div className='justify-content-center'>
+            <center>
             <div className="row cols-md-4 g-4 m-5">
 
                 {slicedList.map(product =>

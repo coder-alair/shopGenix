@@ -28,10 +28,10 @@ const AdminDash = ({user}) => {
         <div>
             <h3 className="mt-4 m-5">Admin Dashboard</h3>
             <div>
-                <div className="row cols-md-4 m-5">
+                <div className="row rows-cols-md-4 m-3">
                     <div className="col mt-5">
                         <div>
-                            <div className="card">
+                            <div className="card"   style={{width:"300px",height:"430px"}}>
                                 <img src="/assets/adminUserIcon.jpeg" className="card-img-top" alt="..."/>
                                     <div className="card-body text-center">
                                         <p className="card-text fs-3">Total Users</p>
@@ -42,7 +42,7 @@ const AdminDash = ({user}) => {
                     </div>
                     <div className="col mt-5">
                         <div>
-                        <div className="card">
+                        <div className="card"  style={{width:"300px",height:"430px"}}>
                                 <img src="/assets/adminProductIcon.jpeg" className="card-img-top" alt="..."/>
                                     <div className="card-body text-center">
                                         <p className="card-text fs-3">Total Products</p>
@@ -53,7 +53,7 @@ const AdminDash = ({user}) => {
                     </div>
                     <div className="col mt-5">
                         <div>
-                        <div className="card">
+                        <div className="card"   style={{width:"300px",height:"430px"}}>
                                 <img src="/assets/adminOrder.png" className="card-img-top" alt="..."/>
                                     <div className="card-body text-center">
                                         <p className="card-text fs-3">Pending Orders</p>

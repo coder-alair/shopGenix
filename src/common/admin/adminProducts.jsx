@@ -20,7 +20,7 @@ window.location.href="/adminPanel";
 
         <div>
 
-<table className="table mt-1">
+<table className="table mt-1 m-3">
 <thead><tr>
 <th scope="col"></th>
 <th scope="col">Product Name</th>

@@ -50,10 +50,10 @@ const Cart = () => {
         <React.Fragment>
             <div>
                 {cartData.length > "0" && (
-                    <p className="fs-4 mt-3 m-5">Cart :</p>
+                    <p className="fs-4 mt-3 m-3">Cart :</p>
                 )}
                 {cartData.map(i =>
-                    <div className="container border m-5" key={i._id}>
+                    <div className="container border m-2" key={i._id}>
                         <div>
                             <div className="row mt-3"><div className="col-3"><img className="border" src={"/products/" + i.product[0].image + ".jpeg"} style={{ height: "100px", width: "100px" }} /><p>{i.product[0].productName}</p></div>
                                 <div className="col-3">
@@ -78,14 +78,14 @@ const Cart = () => {
                 )}
 
                 {cartData.length == "0" && (
-                    <div className="container m-5" key={i._id}>
+                    <div className="container m-3" key={i._id}>
                         <div>
                             <p className="fs-3"> No Products in Cart</p>
                         </div>
                     </div>
                 )}
                 {cartData.length > "0" && (
-                    <div className="container border m-5">
+                    <div className="container border m-2">
                         <div className="d-flex justify-content-end">
                             <div className="fs-4">Total :
                                 {total}
@@ -99,7 +99,7 @@ const Cart = () => {
                 )}
 
                 {cartData.length > "0" && (
-                    <div className="container m-5">
+                    <div className="container m-3">
                             <div className="fs-4 text-center">
                             <Link className="btn btn-warning zoom" to="/orders">Proceed to Checkout -&gt;</Link>
                             </div>

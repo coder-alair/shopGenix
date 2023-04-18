@@ -78,21 +78,21 @@ const Order = () => {
 
 
     return (
-        <div>
-            <div className="container border">
+        <div className='mt-5'>
+            <div className="container border m-2 ">
                 <div className="mt-5 text-center fs-4">Your Products</div>
                 {cartData.map(i =>
-                    <div className="container m-5" key={i._id}>
+                    <div className="container m-3" key={i._id}>
                         <div>
                             <div className="row mt-3"><div className="col-3"><img className="border" src={"/products/" + i.product[0].image + ".jpeg"} style={{ height: "100px", width: "100px" }} /><p>{i.product[0].productName}</p></div>
                                 <div className="col-3">
-                                    <p className="m-2">Quantity</p>
-                                    <span className="m-4">{i.quantity}</span>
-                                </div>
-                                <div className="col-4">
-                                    <p></p>
+                                    <p className="m-4">Quantity</p>
+                                    <span className="m-5">{i.quantity}</span>
                                 </div>
                                 <div className="col-2">
+                                    <p></p>
+                                </div>
+                                <div className="col-2 m-4">
                                     <p>Price</p>
                                     <p>{i.product[0].price * i.quantity}</p>
                                 </div>
@@ -105,13 +105,13 @@ const Order = () => {
                     </div>
                 )}
             </div>
-            <div className='mt-5 container border'>
+            <div className='mt-3 m-2 container border'>
                 <p className='fs-4'>Your Delivery Address </p>
-                <div className="row"><div className="col-10 mb-4">{currentUser.deliAddress} </div><div className="col"><button className="btn btn-primary zoom btn-sm justify-content-end"  data-bs-toggle="modal" data-bs-target="#ChangeAddressModal">Change Address</button></div>
+                <div className="row"><div className="col-10 mb-4">{currentUser.deliAddress} </div><div className="col"><button className="btn btn-primary zoom btn-sm justify-content-end m-3"  data-bs-toggle="modal" data-bs-target="#ChangeAddressModal">Change Address</button></div>
                 </div>
             </div>
 
-            <div className='mt-5 container border'>
+            <div className='mt-3 m-2 container border'>
                 <p className='fs-4'>Price Details </p>
                 <div className="row"><div className="col-10 mb-4">Total Price ( {cartData.length} items )</div><div className="col">{total} /-</div></div>
                 <div className="row"><div className="col-10 mb-4">Delivery Charges </div><div className="col">{deliveryCharges == "Free Delivery" ? <span className='text-success'>Free Delivery</span> : deliveryCharges + " /-"}</div></div>
@@ -119,7 +119,7 @@ const Order = () => {
                 <div className="row"><div className="col-10 mb-4">Total Amount </div><div className="col">{deliveryCharges == "Free Delivery" ? totalAmount + " /-" : totalAmount + " /-"}</div></div>
             </div>
 
-            <div className="container m-5">
+            <div className="container mt-4">
                 <div className="fs-4 text-center">
                     <button className="btn btn-warning zoom" onClick={()=>handleSubmit()}>Place Order</button>
                 </div>

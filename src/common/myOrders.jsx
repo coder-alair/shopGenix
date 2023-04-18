@@ -21,40 +21,36 @@ const MyOrders = () => {
     return (
         <div>
             {orders.length > 0 ?
-                <div>
-                    <table className="table m-5">
-                        <thead><tr>
-                            <th scope="col"></th>
-                            <th scope="col">Product Name</th>
-                            <th scope="col">Product ID</th>
 
-                            <th scope="col">Delivery Address</th>
-                            <th scope="col">Total Amount</th>
-                            <th scope="col">Quantity</th>
-                            <th></th>
+<center>
+            <div className="row cols-md-4 g-4 m-5">
 
-                        </tr>
-                        </thead>
+                {orders.map(i =>
+                    <div className="col" key={i._id}>
+                        <div className="card h-100 zoom" style={{width:"300px"}}>
+                            <div className="card-body">
+                            <center><img src={"/products/"+i.product[0].image+".jpeg"} className="card-img-top" alt="..." style={{width:"200px",height:"200px"}} /></center>
+                           
+                                <h5 className="card-title">{i.product[0].productName}</h5>
+                                <p className="card-text">From : {i.product[0].productId}</p>
+                                <p className="card-text">Ratings : {i.address}</p>
+                                <p className="card-text">Price : {i.totalAmount}</p>
+                                <p className="card-text">Quantity : {i.quantity}</p>
+                                <button className="btn btn-danger btn-sm mt-2 zoom" onClick={() => delOrder(i)}>Cancel Order</button>
 
-                        <tbody >
-                            {orders.map(i =>
-                                <tr key={i._id} className="m-3">
-                                    <td><img className="border" src={"/products/" + i.product[0].image + ".jpeg"} style={{ height: "100px", width: "100px" }} /></td>
-                                    <td className="m-3">{i.product[0].productName}</td>
-                                    <td className="mt-3">{i.product[0].productId}</td>
+                             </div>
+                        </div>
+                    </div>
+                )}
 
-                                    <td className="mt-3">{i.address}</td>
-                                    <td className="mt-3">{i.totalAmount}</td>
-                                    <td className="mt-3">{i.quantity}</td>
 
-                                    <td><button className="btn btn-danger btn-sm mt-2 zoom" onClick={() => delOrder(i)}>Cancel Order</button></td>
 
-                                </tr>
-                            )}
-                        </tbody>
-                    </table>
-                </div>
+
+            </div>
+            </center>
+
                 :
+
                 <div className="fs-3 m-5">No Orders Currently</div>
             }
 

@@ -19,8 +19,8 @@ const Orders = ({ user }) => {
     return (
         <div>
             {orders.length > 0 ?
-                <div className="row cols-md-4">
-                    <table className="table mt-1">
+                <div className="row cols-md-4 m-3">
+                    <table className="table mt-3">
                         <thead><tr>
                             <th scope="col"></th>
                             <th scope="col">Product Name</th>
