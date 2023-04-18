@@ -12,12 +12,12 @@ const Products = ({user}) => {
         getData();
     }, []);
 
-    const slicedList=productsData.slice(6,12);
+    const slicedList=productsData.slice(8,12);
    
 
     return (
-        <div><center>
-            <div className="row row-cols-1 row-cols-md-3 g-4 m-5">
+        <div className='justify-content-center'><center>
+            <div className="row cols-md-4 g-4 m-5">
 
                 {slicedList.map(product =>
                     <div className="col" key={product._id}>

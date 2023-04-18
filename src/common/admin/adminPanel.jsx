@@ -57,10 +57,12 @@ const AdminPanel = () => {
     }
 
     return (
+        
         <div>
             {user.isAdmin&&(
+                <center>
             <div className="row">
-                <div className="col-2 m-5">
+                <div className="col-4 m-5" style={{width:"280px"}}>
                     <ul className="list-group">
                         <Link className="list-group-item fs-6" onClick={handleDash} name='dashboard'>Dashboard</Link>
                         <Link className="list-group-item fs-6" onClick={handleUsers} name='users'>User's</Link>
@@ -77,7 +79,8 @@ const AdminPanel = () => {
 
 
                 </div>
-            </div>)}
+            </div></center>
+            )}
         </div>
     );
 }

@@ -33,7 +33,7 @@ const handleSubmit=async(e)=>{
 
         <div>
 
-<table className="table mt-5">
+<table className="table m-2">
 <thead><tr>
 <th scope="col">Username</th>
 <th scope="col">Email ID</th>
@@ -60,31 +60,51 @@ const handleSubmit=async(e)=>{
 </table>
 <h5 className="mt-5 mb-3">Add User </h5>
 <form onSubmit={handleSubmit}>
-    <div className="row">
-        <div className="mb-3 col">
+    <div className="row rows-cols-md-4 m-3">
+    
+        <div className="mb-3 col-12">
             <label htmlFor="SignUpUsername" className="form-label mt-3">Username</label>
-            <input type="text" className="form-control w-100" name="SignUpUsername" id="SignUpUsername" />
+            <input type="text" className="form-control " name="SignUpUsername" id="SignUpUsername"/>
         </div>
-        <div className="mb-3 col" >
+      
+       
+           
+        <div className="mb-3 col-12" >
             <label htmlFor="SignUpEmail" className="form-label mt-3">Email address</label>
-            <input type="email" className="form-control  w-100" id="SignUpEmail" name="SignUpEmail" aria-describedby="emailHelp" />
-        </div>
+            <input type="email" className="form-control  " id="SignUpEmail" name="SignUpEmail" aria-describedby="emailHelp" />
+       </div>
+       
 
+        
+        
+        <div className="mb-3 col-12">
+            <label htmlFor="SignUpMobileNum" className="form-label mt-3">Mobile Number</label>
+            <input type="Number" className="form-control " name="SignUpMobileNum" id="SignUpMobileNum" />
         </div>
-        <div className="row">
-        <div className="mb-3 col">
-            <label htmlFor="SignUpMobileNum" className="form-label">Mobile Number</label>
-            <input type="Number" className="form-control  w-100" name="SignUpMobileNum" id="SignUpMobileNum" />
+        
+       
+        <div className="mb-3 col-12">
+            <label htmlFor="SignUpPassword" className="form-label mt-3">Password</label>
+            <input type="password" className="form-control " name="SignUpPassword" id="SignUpPassword" />
         </div>
-        <div className="mb-3 col">
-            <label htmlFor="SignUpPassword" className="form-label">Password</label>
-            <input type="password" className="form-control  w-100" name="SignUpPassword" id="SignUpPassword" />
-        </div>
-        <div className="mb-3">
-            <label htmlFor="DeliAddress" className="form-label">Address</label>
+        
+        <div className="mb-3 col-12">
+            <label htmlFor="DeliAddress" className="form-label mt-3">Address</label>
             <input type="text" className="form-control" name="DeliAddress" id="DeliAddress" />
         </div>
-</div>
+
+
+        
+
+
+
+        
+       
+        
+        
+        </div>
+
+
 <div className="text-center">
         <button type="submit" className="btn btn-success mt-4 zoom">Add User</button>
         </div>

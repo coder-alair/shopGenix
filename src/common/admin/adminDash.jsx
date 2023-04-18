@@ -26,12 +26,12 @@ const AdminDash = ({user}) => {
 
     return (
         <div>
-            <h3 className="mt-4">Admin Dashboard</h3>
+            <h3 className="mt-4 m-5">Admin Dashboard</h3>
             <div>
-                <div className="row">
-                    <div className="col-4 mt-5">
+                <div className="row cols-md-4 m-5">
+                    <div className="col mt-5">
                         <div>
-                            <div className="card" style={{width: "18rem"}}>
+                            <div className="card">
                                 <img src="/assets/adminUserIcon.jpeg" className="card-img-top" alt="..."/>
                                     <div className="card-body text-center">
                                         <p className="card-text fs-3">Total Users</p>
@@ -40,9 +40,9 @@ const AdminDash = ({user}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-4 mt-5">
+                    <div className="col mt-5">
                         <div>
-                        <div className="card" style={{width: "18rem"}}>
+                        <div className="card">
                                 <img src="/assets/adminProductIcon.jpeg" className="card-img-top" alt="..."/>
                                     <div className="card-body text-center">
                                         <p className="card-text fs-3">Total Products</p>
@@ -51,9 +51,9 @@ const AdminDash = ({user}) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-4 mt-5">
+                    <div className="col mt-5">
                         <div>
-                        <div className="card" style={{width: "18rem"}}>
+                        <div className="card">
                                 <img src="/assets/adminOrder.png" className="card-img-top" alt="..."/>
                                     <div className="card-body text-center">
                                         <p className="card-text fs-3">Pending Orders</p>

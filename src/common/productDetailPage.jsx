@@ -55,14 +55,14 @@ const ProductDetailPage = () => {
                 </div>
                 <div>
                     <h3 className="mt-5 ml-5 fs-1">{product.productName}</h3>
-                    <div className="row align-items-center">
-                        <div className="col">
+                    <div className="row cols-md-4 align-items-center">
+                        <div className="col-8">
                             <p>Product ID : {product.productId} </p>
                             <p>{product.rating} Star Ratings</p>
                             <p className="fs-2">MRP : {product.price} <small className="text-decoration-line-through">{(product.price + (product.price * discount) / 100).toFixed(0)}</small> <small className="text-success">Discount {discount} % off</small></p>
                             <p>+ 49/- Delivery Charges.</p>
                         </div>
-                        <div className="col border">
+                        <div className="col border mt-5">
                             <b>Available Offers : </b>
                             <dd className="mt-3">Bank Offer Flat <span className="text-success">₹100</span> Instant Cashback on Paytm Wallet. Min Order Value <span className="text-success">₹1000</span>. Valid once per Paytm account</dd>
                             <dd>Bank Offer Get <span className="text-success">10%</span> Cashback on Samsung Axis bank Credit Card</dd>
@@ -71,14 +71,14 @@ const ProductDetailPage = () => {
                         </div>
                     </div>
 
-                    <div className="container fluid border mt-5">
+                    <div className="container-fluid border mt-5">
                         <h3 className="mt-3 mb-3">Specifications :</h3>
                         <p>Colour : {product.colors}</p>
                         <p>Manufactured By : {product.storeName}</p>
                         <p>Details : {product.details}</p>
                         <p>Availability : {product.stock > 0 ? "Available" : "Not Available"}</p>
                     </div>
-
+                
                     {product.stock > 0 && (
                         <React.Fragment>
                             {currentUser && (
@@ -106,7 +106,7 @@ const ProductDetailPage = () => {
 
                         </React.Fragment>
                     )}
-                    <div className="container fluid border mt-5">
+                    <div className="container-fluid border mt-5">
                         <p className="mt-3 mb-3">Reviews : {product.reviews}</p>
                     </div>
 
